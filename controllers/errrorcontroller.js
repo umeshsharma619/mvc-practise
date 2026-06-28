@@ -1,0 +1,3 @@
+exports.errormsz = (req, res, next) => {
+  res.status(404).render("error404", { pagetitle: "error" });
+};
