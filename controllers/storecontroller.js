@@ -35,3 +35,7 @@ exports.getdetails = (req, res, next) => {
     }
   });
 };
+exports.addtofav = (req, res, next) => {
+  console.log("came add to fav", req.body);
+  res.redirect("/favourite");
+};

@@ -1,3 +1,6 @@
-<form action="">
-  <input type="hidden" value="HomesId" />
+<form action="/favourite" method="POST">
+  <input type="hidden" name="id" value="<%= homes.id %>" />
+  <button class="bg-red-400 m-2 p-2 rounded-3xl" type="submit">
+    favourite
+  </button>
 </form>

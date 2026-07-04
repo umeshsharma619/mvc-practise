@@ -23,7 +23,8 @@
                   <span class="text-gray-700"><%= homes.rating %></span>
                 </div>
               </div>
-              <button class="bg-green-300 p-2">Book</button>
+              <%- include("../partials/fav",{homes:homes}) %>
+              
               <a href="/home/<%= homes.id %>" class="bg-amber-400 p-2">details</a>
             </div>
           </div>
