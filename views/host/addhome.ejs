@@ -6,35 +6,39 @@
 
     <h1>add your home here</h1>
     <form action="/addHome" method="POST">
+      <label for="housename">housename</label>
+
       <input
         type="text"
         name="housename"
         id="housename"
         placeholder="enter your housename"
       />
-      <label for="housename">housename</label><br />
+      <label for="price">price per night</label>
+
       <input
         type="text"
         name="price"
         id="price"
         placeholder="enter price per night"
       />
-      <label for="price">price per night</label><br />
+      <label for="location">location</label>
+
       <input
         type="text"
         name="location"
         id="location"
         placeholder="enter location"
       />
-      <label for="location">location</label><br />
+      <label for="rating">rating</label>
+
       <input
         type="number"
         name="rating"
         id="rating"
         placeholder="enter your rating"
       />
-      <label for="rating">rating</label>
-      <br/>
+      
       <button type="submit" class="bg-red text-4xl">add</button>
     </form>
   </body>
