@@ -10,6 +10,7 @@ module.exports = class Home {
     this.photoUrl = photoUrl;
   }
   save() {
+    this.id = Math.random().toString();
     Home.fetchAll((rgisterhomes) => {
       rgisterhomes.push(this);
       const filepath = path.join(Rootdir, "data", "houses.json");

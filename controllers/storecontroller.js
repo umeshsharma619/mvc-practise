@@ -5,6 +5,11 @@ exports.getHomes = (req, res, next) => {
     res.render("store/home", { rgisterhomes: rgisterhomes, pagetitle: "home" }),
   );
 };
+exports.getIndex = (req, res, next) => {
+  Home.fetchAll((rgisterhomes) =>
+    res.render("store/home", { rgisterhomes: rgisterhomes, pagetitle: "home" }),
+  );
+};
 
 exports.getBooking = (req, res, next) => {
   res.render("store/booking", { pagetitle: "booking_page" });
@@ -12,6 +17,13 @@ exports.getBooking = (req, res, next) => {
 
 exports.getfav = (req, res, next) => {
   Home.fetchAll((rgisterhomes) =>
-    res.render("store/favourite", { rgisterhomes: rgisterhomes, pagetitle: "favourite" }),
+    res.render("store/favourite", {
+      rgisterhomes: rgisterhomes,
+      pagetitle: "favourite",
+    }),
   );
+};
+
+exports.getdetails = (req, res, next) => {
+  res.render("store/details", { pagetitle: "details_page" });
 };
