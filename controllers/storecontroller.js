@@ -36,6 +36,6 @@ exports.getdetails = (req, res, next) => {
   });
 };
 exports.addtofav = (req, res, next) => {
-  console.log("came add to fav", req.body);
+  console.log("came add to fav", req.body.id);
   res.redirect("/favourite");
 };

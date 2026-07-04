@@ -7,6 +7,8 @@ const Rootdir = require("./utils/pathutils");
 const { errormsz } = require("./controllers/errrorcontroller");
 app.set("view engine", "ejs");
 app.set("views", "views");
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static(path.join(Rootdir, "public")));
 app.use(userRouter);
 app.use(hostRouter);
