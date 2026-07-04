@@ -26,6 +26,12 @@ exports.getfav = (req, res, next) => {
 
 exports.getdetails = (req, res, next) => {
   const HomesId = req.params.HomesId;
-  console.log("at home page id", HomesId);
-  res.render("store/details", { pagetitle: "details_page" });
+  Home.findById(HomesId, (home) => {
+    if (!home) {
+      console.log("home not found");
+      res.redirect("/home");
+    } else {
+      res.render("store/details", { pagetitle: "detail_page", homes: home });
+    }
+  });
 };
